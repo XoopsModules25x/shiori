@@ -1,31 +1,28 @@
 <?php
+
 /**
  * A simple description for this script
  *
- * PHP Version 5.2.4 or Upper version
+ * PHP Version 7.2 or Upper version
  *
  * @package    Shiori
  * @author     Hidehito NOZAWA aka Suin <http://suin.asia>
  * @copyright  2009 Hidehito NOZAWA
- * @license    http://www.gnu.org/licenses/gpl-2.0.html GNU GPL v2 or later
- *
+ * @license    https://www.gnu.org/licenses/gpl-2.0.html GNU GPL v2 or later
  */
+define('_SHIORI_NAME', 'Shiori(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¥Ã¥ï¿½ï¿½Þ¡ï¿½ï¿½ï¿½)');
+define('_SHIORI_DESC', 'ï¿½ï¿½ï¿½Î¥â¥¸ï¿½å¡¼ï¿½ï¿½Ï¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¥Ú¡ï¿½ï¿½ï¿½ï¿½ï¿½Ö¥Ã¥ï¿½ï¿½Þ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë¤¿ï¿½ï¿½Î¥â¥¸ï¿½å¡¼ï¿½ï¿½Ç¤ï¿½ï¿½ï¿½');
 
-define('_SHIORI_NAME', "Shiori(¥µ¥¤¥ÈÆâ¥Ö¥Ã¥¯¥Þ¡¼¥¯)");
-define('_SHIORI_DESC', "¤³¤Î¥â¥¸¥å¡¼¥ë¤Ï¥µ¥¤¥ÈÆâ¤Î¥Ú¡¼¥¸¤ò¥Ö¥Ã¥¯¥Þ¡¼¥¯¤¹¤ë¤¿¤á¤Î¥â¥¸¥å¡¼¥ë¤Ç¤¹¡£");
+define('_SHIORI_BLOCK1', 'ï¿½Ö¥Ã¥ï¿½ï¿½Þ¡ï¿½ï¿½ï¿½');
+define('_SHIORI_BLOCK1_DESC', 'ï¿½Ö¥Ã¥ï¿½ï¿½Þ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É²Ã¤ï¿½ï¿½ë¤¿ï¿½ï¿½Î¥Ö¥ï¿½Ã¥ï¿½');
+define('_SHIORI_BLOCK2', 'JavaScriptï¿½É¤ß¹ï¿½ï¿½ï¿½');
+define('_SHIORI_BLOCK2_DESC', 'ï¿½Ö¥ï¿½ó¥¯¥ï¿½Ã¥ï¿½ï¿½Ö¥Ã¥ï¿½ï¿½Þ¡ï¿½ï¿½ï¿½ï¿½×¤ï¿½JavaScriptï¿½ï¿½ï¿½É¤ß¹ï¿½ï¿½à¤¿ï¿½ï¿½Î¥Ö¥ï¿½Ã¥ï¿½');
 
-define('_SHIORI_BLOCK1', "¥Ö¥Ã¥¯¥Þ¡¼¥¯");
-define('_SHIORI_BLOCK1_DESC', "¥Ö¥Ã¥¯¥Þ¡¼¥¯¤ËÄÉ²Ã¤¹¤ë¤¿¤á¤Î¥Ö¥í¥Ã¥¯");
-define('_SHIORI_BLOCK2', "JavaScriptÆÉ¤ß¹þ¤ß");
-define('_SHIORI_BLOCK2_DESC', "¡Ö¥ï¥ó¥¯¥ê¥Ã¥¯¥Ö¥Ã¥¯¥Þ¡¼¥¯¡×¤ÎJavaScript¤òÆÉ¤ß¹þ¤à¤¿¤á¤Î¥Ö¥í¥Ã¥¯");
+define('_SHIORI_CONFIG1', 'ï¿½Ö¥Ã¥ï¿½ï¿½Þ¡ï¿½ï¿½ï¿½ï¿½Îºï¿½ï¿½ï¿½ï¿½ï¿½Â¸ï¿½ï¿½ï¿½');
+define('_SHIORI_CONFIG1_DESC', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¥Ö¥Ã¥ï¿½ï¿½Þ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¸ï¿½ï¿½ï¿½Ì¤Ç¤ï¿½ï¿½ï¿½');
+define('_SHIORI_CONFIG2', 'ï¿½ï¿½ï¿½Ú¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¥Ã¥ï¿½ï¿½Þ¡ï¿½ï¿½ï¿½ï¿½Î·ï¿½ï¿½');
+define('_SHIORI_CONFIG3', 'URLï¿½ï¿½ï¿½ï¿½ï¿½Ï¤ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½Ç¤ï¿½ï¿½ï¿½è¤¦ï¿½Ë¤ï¿½ï¿½ï¿½');
+define('_SHIORI_CONFIG4', 'ï¿½ï¿½ï¿½ï¿½ï¿½Î¥ï¿½ï¿½ï¿½ï¿½È¤Ø¤Î¥Ö¥Ã¥ï¿½ï¿½Þ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¤ï¿½ï¿½ï¿½');
+define('_SHIORI_CONFIG4_DESC', 'ï¿½ï¿½URLï¿½ï¿½ï¿½ï¿½ï¿½Ï¤ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½Ç¤ï¿½ï¿½ï¿½è¤¦ï¿½Ë¤ï¿½ï¿½ï¿½×¤ï¿½Í­ï¿½ï¿½ï¿½Ê¾ï¿½ç¡¢ï¿½Ö¤Ï¤ï¿½ï¿½×¤Ë¤ï¿½ï¿½ï¿½ï¿½ ' . XOOPS_URL . '/* ï¿½Ê³ï¿½ï¿½ï¿½URLï¿½Ø¥ï¿½ó¥¯¤ï¿½ï¿½ë¤³ï¿½È¤ï¿½ï¿½ï¿½Ç½ï¿½Ë¤Ê¤ï¿½Þ¤ï¿½ï¿½ï¿½');
 
-define('_SHIORI_CONFIG1', "¥Ö¥Ã¥¯¥Þ¡¼¥¯¤ÎºÇÂçÊÝÂ¸·ï¿ô");
-define('_SHIORI_CONFIG1_DESC', "£±¿ÍÅö¤¿¤ê¤Î¥Ö¥Ã¥¯¥Þ¡¼¥¯¤ÎÊÝÂ¸ÍÆÎÌ¤Ç¤¹¡£");
-define('_SHIORI_CONFIG2', "£±¥Ú¡¼¥¸Åö¤¿¤ê¤ËÉ½¼¨¤¹¤ë¥Ö¥Ã¥¯¥Þ¡¼¥¯¤Î·ï¿ô");
-define('_SHIORI_CONFIG3', "URL¤òÆþÎÏ¤·¤ÆÅÐÏ¿¤Ç¤­¤ë¤è¤¦¤Ë¤¹¤ë");
-define('_SHIORI_CONFIG4', "³°Éô¤Î¥µ¥¤¥È¤Ø¤Î¥Ö¥Ã¥¯¥Þ¡¼¥¯¤òµö²Ä¤¹¤ë");
-define('_SHIORI_CONFIG4_DESC', "¡ÖURL¤òÆþÎÏ¤·¤ÆÅÐÏ¿¤Ç¤­¤ë¤è¤¦¤Ë¤¹¤ë¡×¤¬Í­¸ú¤Ê¾ì¹ç¡¢¡Ö¤Ï¤¤¡×¤Ë¤¹¤ë¤È ".XOOPS_URL."/* °Ê³°¤ÎURL¤Ø¥ê¥ó¥¯¤¹¤ë¤³¤È¤¬²ÄÇ½¤Ë¤Ê¤ê¤Þ¤¹¡£");
-
-define('_SHIORI_ADMIN1', "¥Ö¥Ã¥¯¥Þ¡¼¥¯Åý·×");
-
-?>
+define('_SHIORI_ADMIN1', 'ï¿½Ö¥Ã¥ï¿½ï¿½Þ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½');

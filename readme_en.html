@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="ja" lang="ja">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <title>Shioriモジュール説明書</title>
+    <style type="text/css">
+        <!--
+        body {
+            font-size: 80%;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        h1 {
+            font-size: 200%;
+            letter-spacing: 1px;
+            color: #ff6600;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 120%;
+            border-left-width: 3px;
+            border-left-style: solid;
+            border-left-color: #ff6600;
+            padding-left: 5px;
+            color: #ff6600;
+            border-bottom-width: 1px;
+            border-bottom-style: dotted;
+            border-bottom-color: #ff6600;
+        }
+
+        h3 {
+            font-size: 100%;
+            padding-left: 5px;
+            color: #ff6600;
+        }
+
+        #main_div {
+            text-align: left;
+            width: 500px;
+            height: 100%;
+            line-height: 1.4;
+        }
+
+        table {
+            width: 100%;
+            border-style: solid solid solid solid;
+            border-top-color: silver;
+            border-right-color: silver;
+            border-bottom-color: silver;
+            border-left-color: silver;
+        }
+
+        td {
+            padding: 2px;
+            border-width: 1px 1px 1px 1px;
+            border-style: solid solid solid solid;
+            border-color: silver silver silver silver;
+        }
+
+        th {
+            padding: 2px;
+            border-width: 1px 1px 1px 1px;
+            border-style: solid solid solid solid;
+            border-color: silver silver silver silver;
+        }
+
+        #quote {
+            padding-left: 5px;
+            margin-top: 5px;
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-bottom: 5px;
+            border-left-width: 1px;
+            border-left-style: solid;
+            border-left-color: #ffbe7d;
+        }
+
+        img {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        pre.code {
+            background: #FFFFFF;
+            border: 1px inset #000080;
+            padding: 0px 6px 6px 6px;
+            width: 480px;
+            height: 5em;
+            margin: 0.5em;
+            overflow: auto;
+        }
+
+        .news {
+            font-size: 1em;
+            letter-spacing: 1px;
+        }
+
+        .align_right {
+            text-align: right;
+        }
+
+        .align_center {
+            text-align: center;
+        }
+
+        -->
+    </style>
+</head>
+<body>
+<div align="center">
+    <div id="main_div">
+        <h1>Shiori</h1>
+
+        <h2>About This Module</h2>
+        <img src="images/shiori_logo.png" border="0" align="left">
+        The Shiori module is a module that allows users to create personal bookmark books and to bookmark any page in the site.
+        It was made for the purpose of not losing sight of the page of reading, the bulletin board which checks everyday,
+        the article which might be useful someday.
+
+        <h3>See the Module in action(YouTube Video)</h3>
+        <object width="480" height="295">
+            <param name="movie" value="http://www.youtube.com/v/um4SyJ61rWQ&hl=ja&fs=1&rel=0"></param>
+            <param name="allowFullScreen" value="true"></param>
+            <param name="allowscriptaccess" value="always"></param>
+            <embed src="http://www.youtube.com/v/um4SyJ61rWQ&hl=ja&fs=1&rel=0" type="application/x-shockwave-flash"
+                   allowscriptaccess="always" allowfullscreen="true" width="480" height="295"></embed>
+        </object>
+
+        <h2>Operating environment</h2>
+        <table cellpadding="0" cellspacing="0" class="news" border="0">
+            <tr>
+                <td>PHP Version</td>
+                <td>5.2.4 or higher</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>mbstring Required</td>
+            </tr>
+            <tr>
+                <td>XOOPS</td>
+                <td>XOOPS Cube 2.1.6~ / XOOPS 2.0.16a JP</td>
+            </tr>
+            <tr>
+                <td>Character Code</td>
+                <td>UTF-8(recommended) / EUC-JP</td>
+            </tr>
+        </table>
+
+        <h2>Characteristic</h2>
+        <ul>
+            <li>You can create a bookmark book for each user</li>
+            <li>Bookmark registered with one click</li>
+            <li>Pagination inside and outside the site can be bookmarked</li>
+        </ul>
+
+        <h2>Installation method</h2>
+        <ol>
+            <li>Extract the compressed file and copy shiori under html / modules /.</li>
+            <li>Please perform installation with "module management".</li>
+            <li>Please grant access authority to the group that allows bookmarks in "Group management".</li>
+            <li>Please set to display "bookmark" block on all pages in "Block Management".</li>
+        </ol>
+
+        <h2>One click bookmark</h2>
+        <img src="images/unbookmarked.png" border="0" align="left"><img src="images/loading.gif" border="0"
+                                                                        align="left"><img src="images/bookmarked.png"
+                                                                                          border="0" align="left">
+        <p>
+            One click bookmark is a function that you can bookmark that page to Shiori just by clicking the star icon.
+            With this function, users can bookmark pages with less work and improve usability.
+        </p>
+
+        <!--
+        <h3>利用にはjQuery 1.2.6が必要です</h3>
+        <p>
+        ワンクリックブックマークを使うには、ライブラリ<a href="http://jquery.com/">jQuery</a> 1.2.6以降が必要です。
+        theme.htmlで、&lt;{$xoops_module_header}&gt;より上にjQueryを読み込むタグを追加してください。
+        jQueryは自前でダウンロードしてくるか、Googleがホスティングしているライブラリを利用するなどしてください。
+        参考までに、Googleがホスティングしているライブラリを利用するには次のようなタグを追加します。
+        </p>
+        <pre class="code">
+        &lt;script type="text/javascript" src="http://www.google.com/jsapi"&gt;&lt;/script&gt;
+        &lt;script type="text/javascript"&gt;google.load("jquery", "1.2.6");&lt;/script&gt;
+        </pre>
+
+         <h3> jQuery 1.2.6 is required for use </ h3>
+         <p>
+         In order to use one click bookmark, you need the library <a href="http://jquery.com/"> jQuery </a> 1.2.6 or later.
+         In theme.html, add a tag that reads jQuery above & lt; {$ xoops_module_header} & gt ;.
+         Please download jQuery by yourself, or use the library hosted by Google etc.
+         For your reference, to use the library hosted by Google we add the following tags.
+         </p>
+         <pre class = "code">
+         &lt; script type = "text / javascript" src = "http://www.google.com/jsapi" & gt; & lt; / script & gt;
+         <script type = "text / javascript" & gt; google.load ("jquery", "1.2.6"); & lt; / script & gt;
+         </pre>
+        -->
+
+        <h3>Example of setting in the user menu</h3>
+        <p>
+            The following is an example of setting the button of the one-click bookmark in the user menu block (legacy_block_usermenu.html).
+            The part highlighted with orange is the part added for one click bookmark.
+        </p>
+        <pre class="code" style="height:30em;">
+&lt;table cellspacing=&quot;0&quot;&gt;
+  &lt;tr&gt;
+    &lt;td id=&quot;usermenu&quot;&gt;
+      &lt;a class=&quot;menuTop&quot; href=&quot;&lt;{$xoops_url}&gt;/user.php&quot;&gt;&lt;{$smarty.const._MB_LEGACY_VACNT}&gt;&lt;/a&gt;
+      &lt;a href=&quot;&lt;{$xoops_url}&gt;/edituser.php&quot;&gt;&lt;{$smarty.const._MB_LEGACY_EACNT}&gt;&lt;/a&gt;
+      &lt;a href=&quot;&lt;{$xoops_url}&gt;/notifications.php&quot;&gt;&lt;{$smarty.const._MB_LEGACY_NOTIF}&gt;&lt;/a&gt;
+      <span style="color: #ff6600;">&lt;a href=&quot;&lt;{$xoops_url}&gt;/modules/shiori/&quot;&gt;&lt;img src=&quot;&lt;{$xoops_url}&gt;/modules/shiori/images/unbookmarked.png&quot; id=&quot;shiori_bookmark_star&quot; style=&quot;float:right;display:none;&quot; rel=&quot;&lt;{$xoops_url}&gt;&quot; /&gt;Bookmark&lt;/a&gt;</span>
+      &lt;a href=&quot;&lt;{$xoops_url}&gt;/user.php?op=logout&quot;&gt;&lt;{$smarty.const._MB_LEGACY_LOUT}&gt;&lt;/a&gt;      &lt;{if $block.flagShowInbox}&gt;
+        &lt;{if $block.new_messages &gt; 0}&gt;
+          &lt;a class=&quot;highlight&quot; href=&quot;&lt;{$block.inbox_url}&gt;&quot;&gt;&lt;{$smarty.const._MB_LEGACY_INBOX}&gt; (&lt;span style=&quot;color:#ff0000; font-weight: bold;&quot;&gt;&lt;{$block.new_messages}&gt;&lt;/span&gt;)&lt;/a&gt;
+        &lt;{else}&gt;
+          &lt;a href=&quot;&lt;{$block.inbox_url}&gt;&quot;&gt;&lt;{$smarty.const._MB_LEGACY_INBOX}&gt;&lt;/a&gt;
+        &lt;{/if}&gt;
+      &lt;{/if}&gt;
+      &lt;{if $block.show_adminlink}&gt;
+        &lt;a href=&quot;&lt;{$xoops_url}&gt;/admin.php&quot;&gt;&lt;{$smarty.const._MB_LEGACY_ADMENU}&gt;&lt;/a&gt;
+      &lt;{/if}&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+
+        <h3>When used with XOOPS 2.x</h3>
+        <p>
+            When using with XOOPS 2, in addition to above, please set to display "JavaScript read" block on "all pages" in block management. Please set access right according to group using Shiori.
+            </p>
+        <p>The "Load JavaScript" block is for enabling jQuery plugin automatically. Please do not use on XOOPS Cube.</p>
+
+
+        <h2>How to uninstall</h2>
+        <ol>
+            <li>Please change the Shiori module to inactive in "module management", then uninstall it.</li>
+            <li>Please remove shiori from html / modules /.</li>
+        </ol>
+
+        <h2>Change log</h2>
+        <table cellpadding="0" cellspacing="0" class="news" border="0">
+            <col span="3">
+            <tbody>
+            <tr>
+                <th align="center">Ver</th>
+                <th align="center">Date</th>
+                <th align="center">Category</th>
+                <th align="center">Note</th>
+            </tr>
+            <tr>
+                <td align="center">1.00</td>
+                <td align="center">2009.11.01</td>
+                <td align="center">---</td>
+                <td>Initial release</td>
+            </tr>
+            <tr>
+                <td align="center">1.01</td>
+                <td align="center">2009.11.03</td>
+                <td align="center">---</td>
+                <td>
+                    <ol>
+                        <li>Fixed javascript error when jQuery was not loaded (umoto private message)</li>
+                        <li> Fixed that one click bookmark garbled when it was not UTF - 8 (umoto private message) </li>
+                        <li> Partial correspondence to XOOPS 2 (template manager not supported) </li>
+                    </ol>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">1.02</td>
+                <td align="center">2009.11.10</td>
+                <td align="center">---</td>
+                <td>
+                    <ol>
+                        <li>"Bookmark Statistics" page added to management screen</li>
+                        <li>If jQuery is not loaded, change to load jQuery enclosed with module (Users no longer need to edit theme.)</li>
+                    </ol>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <h2>Technical information</h2>
+        <h3>Language file</h3>
+        <p>
+            n shiori, except for modinfo.php, I make a language file in XML.
+            Regardless of the character code of XOOPS, all language files are UTF-8.
+        </p>
+        <p>
+            When shiori is called, the XML language file is compiled into PHP and saved as a cache.
+            The saved location is either XOOPS_ROOT_PATH. '/ Cache' or XOOPS_TRUST_PATH. '/ Cache'.
+        </p>
+        <p>
+            A file called shiori_ {language code} _ {character code}. php is created.
+            (Such as shiori_ja_utf - 8.php) This cache file will not be updated unless it is deleted.
+        </p>
+
+        <h2>Developer</h2>
+        Suin (<a href="http://suin.asia">http://suin.asia</a>)
+
+    </div>
+</div>
+</body>
+</html>

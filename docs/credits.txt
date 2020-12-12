@@ -1,0 +1,6 @@
+Credits
+===============
+
+Originally developed by Hidehito NOZAWA aka Suin
+
+Version 1.05 was updated to XOOPS 2.5.11 Standard GUI by Michael Beck (Mamba)

@@ -2,19 +2,18 @@
 /**
  * A simple description for this script
  *
- * PHP Version 5.2.4 or Upper version
+ * PHP Version 7.2 or Upper version
  *
  * @package    Shiori
  * @author     Hidehito NOZAWA aka Suin <http://suin.asia>
  * @copyright  2009 Hidehito NOZAWA
- * @license    http://www.gnu.org/licenses/gpl-2.0.html GNU GPL v2 or later
- *
+ * @license    https://www.gnu.org/licenses/gpl-2.0.html GNU GPL v2 or later
  */
 
-require '../../mainfile.php';
-require 'shiori.php';
+use XoopsModules\Shiori;
 
-Shiori::setup();
-Shiori::execute();
+require_once dirname(__DIR__, 2) . '/mainfile.php';
+//require_once __DIR__ . '/shiori.php';
 
-?>
+Shiori\ShioriClass::setup();
+Shiori\ShioriClass::execute();
